@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Cargar DaisyUI con configuración inline */
+@plugin "daisyui" {
+  themes: lindsay --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "lindsay";
+  default: true;
+
+  /* Tus colores personalizados */
+  --color-primary: #F257A2;
+  --color-primary-content: #FFFFFF;
+
+  --color-secondary: #322DBF;
+  --color-secondary-content: #FFFFFF;
+
+  --color-accent: #F1EAE4;
+  --color-accent-content: #1A2144;
+
+  --color-neutral: #1A2144;
+  --color-neutral-content: #F9F9F9;
+
+  --color-base-100: #F9F9F9;
+  --color-base-200: #F1EAE4;
+  --color-base-300: #E3E2EA;
+  --color-base-content: #1A2144;
+
+  /* Estados semánticos */
+  --color-info: #3ABFF8;
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+}
+
+/* Tu base y utilidades */
+html, body { font-family: 'Urbanist', system-ui, sans-serif; }
+
+@layer utilities {
+  .font-primary { font-family: 'Urbanist', system-ui, sans-serif !important; }
+  .font-display { font-family: 'Climate Crisis', cursive !important; }
+}
